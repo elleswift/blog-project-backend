@@ -15,7 +15,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.listen(4000, () => console.log("Listening on 4000"))
+app.listen(PORT, () => console.log("Listening on 4000"))
 
 app.get('/', async (req, res) => {                    
 const allArticles = await articles.find().toArray()
