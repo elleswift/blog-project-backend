@@ -34,6 +34,7 @@ app.delete('/', async (req, res) => {
 })
  
 
+
 app.put('/', async (req, res) => {
   articles.findOneAndUpdate(req.query, { $set: req.body })
    res.json('Entry updated')
