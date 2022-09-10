@@ -32,7 +32,7 @@ app.delete('/', async (req, res) => {
   await articles.findOneAndDelete(req.query)
  res.json('Entry deleted')
 })
-
+ 
 
 app.put('/', async (req, res) => {
   articles.findOneAndUpdate(req.query, { $set: req.body })
