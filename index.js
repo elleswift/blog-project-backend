@@ -33,11 +33,9 @@ app.delete('/remove-article', async (req, res) => {
  res.json('Entry deleted')
 })
  
-
-
 app.put('/update-article', async (req, res) => {
-  // find Article that you wnat to update
-  // set desried key to variable
+  // find Article that to be updated
+  // set desired key to variable
   // set the req.boby.title to the article title
   articles.findOneAndUpdate(req.query, { $set: req.body })
    res.json('Entry updated')
